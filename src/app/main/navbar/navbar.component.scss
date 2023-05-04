@@ -1,0 +1,222 @@
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &-maxWidth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 3rem;
+
+    & > img {
+      scale: 1.4;
+    }
+  }
+
+  * {
+    font-size: 1.3rem;
+  }
+
+  &-links {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    // border: 1px solid green;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    // width: 60%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding-right: 1rem;
+    padding-left: 3rem;
+    background-color: rgba(122, 118, 118, 0.203);
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      border-radius: 3px;
+      gap: 0 1rem;
+      padding: 3rem 0.5rem;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 3px solid rgba(240, 248, 255, 0.541) !important;
+      }
+    }
+    * {
+      color: white;
+    }
+  }
+
+  &-line {
+    border-bottom: 1px solid gray;
+    margin-right: -4rem;
+    width: 30%;
+    z-index: 10;
+  }
+
+  &-links-mobile {
+    display: none;
+  }
+  &-menu-icon {
+    display: none;
+  }
+  &-menu-mobile {
+    display: none;
+  }
+}
+
+.active-link {
+  border-bottom: 3px solid aliceblue !important;
+  border-radius: 3px;
+
+  &-mobile {
+    border-right: 3px solid aliceblue !important;
+    border-radius: 3px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .navbar {
+    top: 0;
+
+    * {
+      font-size: 1.7rem;
+    }
+
+    &-maxWidth {
+      padding: 2rem 0 0 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul {
+      width: auto;
+    }
+    &-line {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .navbar {
+    &-maxWidth {
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > img {
+        scale: 1;
+      }
+    }
+
+    &-menu-icon {
+      display: block;
+    }
+
+    &-links-mobile {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
+
+      width: 60%;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      padding-right: 1rem;
+      padding-left: 3rem;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 1rem;
+        padding: 3rem 0.5rem;
+        cursor: pointer;
+      }
+      * {
+        color: white;
+      }
+    }
+
+    ul {
+      display: none;
+    }
+
+    &-menu-icon {
+      div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+      }
+
+      &-close {
+        padding-right: 3rem;
+        direction: rtl;
+
+        div {
+          width: 35px;
+          height: 5px;
+          background-color: white;
+          margin: 6px 0;
+        }
+        div:first-child {
+          transform: translate(0, 1px) rotate(-45deg);
+        }
+
+        div:nth-child(2) {
+          transform: translate(0, -11px) rotate(45deg);
+        }
+      }
+    }
+
+    &-menu-mobile {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 30px;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li {
+          font-size: 2.5rem;
+          * {
+            font-size: 2.5rem;
+          }
+          justify-content: flex-start;
+          align-items: flex-start;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

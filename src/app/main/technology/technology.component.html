@@ -1,0 +1,30 @@
+<div class="technology-container full-height full-width"
+[ngStyle]="{'background-image': deviceWidth > 959 ? 'url(../../../assets/technology/background-technology-desktop.jpg)' : deviceWidth > 599 ? 'url(../../../assets/technology/background-technology-tablet.jpg)' : 'url(../../../assets/technology/background-technology-mobile.jpg)'}">
+  <div class=" content-container full-height">
+    <div class="technology-title">
+    <span>03</span>
+    <span>SPACE LAUNCH 101</span>
+   </div>
+    <div class="technology-body full-width">
+      <div class="technology-information full-height">
+        <div class="technology-image-mobile full-width">
+          <img [src]="selectedTechnology.images.landscape" alt=""/>
+        </div>
+        <div class="technology-selection">
+          <div *ngFor="let technology of technologies, let idx = index" class="technologyCircle" (click)="technologyChanged(technology)"
+          [ngClass]=" selectedTechnology.name === technology.name ? 'technologyCircle-active' : ''">
+          {{ idx + 1 }}
+        </div>
+        </div>
+        <div class="technology-information-selected">
+          <p>THE TERMINOLOGY...</p>
+          <p>{{ selectedTechnology.name | uppercase }}</p>
+          <p>{{ selectedTechnology.description }}</p>
+        </div>
+      </div>
+      <div class="technology-image full-height">
+        <img [src]="selectedTechnology.images.portrait" alt=""/>
+      </div>
+    </div>
+  </div>
+</div>

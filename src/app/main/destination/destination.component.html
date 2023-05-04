@@ -1,0 +1,38 @@
+<div class="destination-container full-height full-width"
+[ngStyle]="{'background-image': deviceWidth > 959 ? 'url(../../../assets/destination/background-destination-desktop.jpg)' : deviceWidth > 599 ? 'url(../../../assets/destination/background-destination-tablet.jpg)' : 'url(../../../assets/destination/background-destination-mobile.jpg)'}">
+
+<div class="destination-container-maxWidth content-container full-height full-width">
+
+  <div class="destination-title">
+    <span>01</span>
+    <span>PICK YOUR DESTINATION</span>
+  </div>
+  <div class="destination-body full-width">
+    <img [src]="selectedDestination.images.png" alt=""/>
+    <div class="destination-information full-height">
+      <ul class="destination-selection full-width">
+        <li *ngFor="let destination of destinations" (click)="selectDestination(destination)" 
+        [ngClass]="selectedDestination.name === destination.name ? 'activeDestination' : ''">
+          {{ destination.name | uppercase }}
+        </li>
+      </ul>
+      <div class="destination-information-selected full-width">
+        <p>{{ selectedDestination.name | uppercase }}</p>
+        <p>{{ selectedDestination.description }}</p>
+      </div>
+      <div class="destination-information-selected-line"></div>
+      <div class="destination-distance-time full-width">
+        <div class="destination-distance">
+          <p>AVG. DISTANCE</p>
+          <p>{{ selectedDestination.distance | uppercase }}</p>
+        </div>
+        <div class="destination-time">
+          <p>EST. TRAVEL TIME</p>
+          <p>{{ selectedDestination.travel | uppercase }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

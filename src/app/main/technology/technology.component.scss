@@ -1,0 +1,198 @@
+.technology {
+  &-container {
+    padding-top: 8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    * {
+      color: aliceblue;
+      font-size: 1.5rem;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  }
+  &-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 2rem;
+
+    & :first-child {
+      opacity: 0.5;
+    }
+
+    * {
+      font-size: 2.3rem;
+    }
+  }
+
+  &-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  &-image {
+    &-mobile {
+      display: none;
+    }
+    & > img {
+      margin-top: -2rem;
+    }
+  }
+
+  &-information {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5rem;
+
+    &-selected {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      & p:first-child {
+        opacity: 0.7;
+      }
+
+      & :nth-child(2) {
+        font-size: 4rem;
+        padding: 0rem 0 1rem 0;
+      }
+      & :nth-child(3) {
+        opacity: 0.9;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        font-weight: 100 !important;
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  &-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+
+    .technologyCircle {
+      cursor: pointer;
+      background-color: transparent;
+      border-radius: 50%;
+      padding: 1.5rem 2.3rem;
+      color: white;
+      font-size: 2rem;
+      border: 1px solid gray;
+
+      &:hover {
+        border: 1px solid aliceblue;
+      }
+
+      &-active {
+        background-color: aliceblue;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .technology {
+    &-container {
+      padding-top: 0;
+
+      & > div {
+        align-items: center;
+      }
+    }
+    &-body {
+      width: -moz-fit-content;
+      width: fit-content;
+      flex-direction: column;
+    }
+
+    &-information {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-selected {
+        padding: 1rem;
+        text-align: center;
+
+        & :first-child {
+          font-size: 2rem;
+        }
+        & :nth-child(2) {
+          font-size: 5rem;
+        }
+        & :nth-child(3) {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          font-weight: 300 !important;
+        }
+      }
+    }
+
+    &-image {
+      display: none;
+      width: 100%;
+      &-mobile {
+        display: block;
+
+        & > img {
+          scale: 1.136;
+        }
+      }
+    }
+
+    &-selection {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .technology {
+    &-container {
+      background-size: cover;
+
+      & > div {
+        align-items: center;
+      }
+    }
+    &-image-mobile {
+      & > img {
+        width: 100%;
+      }
+    }
+    &-information {
+      &-selected {
+        & :first-child {
+          font-size: 2rem;
+        }
+        & :nth-child(2) {
+          font-size: 5rem;
+        }
+        & :nth-child(3) {
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          font-weight: 300 !important;
+        }
+      }
+    }
+  }
+}

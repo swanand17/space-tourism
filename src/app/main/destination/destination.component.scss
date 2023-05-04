@@ -1,0 +1,230 @@
+.destination {
+  &-container {
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    * {
+      color: aliceblue;
+      font-size: 1.5rem;
+    }
+
+    &-maxWidth {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 2rem;
+
+    & :first-child {
+      opacity: 0.5;
+    }
+
+    * {
+      font-size: 2.3rem;
+    }
+  }
+
+  &-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+
+    & > img {
+      -webkit-animation: spin 100s linear infinite;
+      -moz-animation: spin 100s linear infinite;
+      animation: spin 100s linear infinite;
+    }
+    @-moz-keyframes spin {
+      100% {
+        -moz-transform: rotate(360deg);
+      }
+    }
+    @-webkit-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 50%;
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      list-style-type: none;
+      gap: 0 2rem;
+
+      li {
+        font-family: BarlowCondensed;
+        cursor: pointer;
+        padding: 1.2rem 0;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          border-bottom: 3px solid rgba(240, 248, 255, 0.541) !important;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    &-selected {
+      & :first-child {
+        font-size: 7rem;
+        letter-spacing: 1rem;
+      }
+      & :nth-child(2) {
+        padding: 2rem 0 1rem 0;
+        font-size: 1.7rem;
+        word-wrap: break-word;
+      }
+
+      &-line {
+        border: 1px solid grey;
+        width: 100%;
+      }
+    }
+  }
+
+  &-distance-time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 10rem;
+
+    * {
+      font-family: BarlowCondensed;
+      font-size: 1.3rem;
+    }
+  }
+
+  &-distance :nth-child(2) {
+    font-family: Bellefair;
+    padding-top: 0.8rem;
+    font-size: 2.4rem;
+  }
+  &-time :nth-child(2) {
+    font-family: Bellefair;
+    padding-top: 0.8rem;
+    font-size: 2.4rem;
+  }
+}
+
+.activeDestination {
+  border-bottom: 3px solid aliceblue !important;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 959px) {
+  .destination {
+    &-container {
+      &-maxWidth {
+        align-items: center;
+      }
+    }
+    &-body {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0 2rem;
+
+      & > img {
+        scale: 0.8;
+      }
+    }
+
+    &-information {
+      justify-content: flex-start;
+      max-width: 100%;
+      ul {
+        justify-content: center;
+        align-items: center;
+
+        li {
+          font-size: 2.5rem;
+          padding: 1.2rem 2rem;
+        }
+      }
+
+      &-selected {
+        text-align: center;
+
+        & :nth-child(2) {
+          padding: 2rem 0 2rem 0;
+          font-size: 2.5rem;
+          word-wrap: break-word;
+        }
+      }
+    }
+    &-distance-time {
+      justify-content: center;
+      text-align: center;
+
+      * {
+        font-family: BarlowCondensed;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .destination {
+    &-container {
+      background-size: cover;
+    }
+    &-information {
+      padding: 0 3rem;
+    }
+    &-body {
+      flex-direction: column;
+      & > img {
+        margin-bottom: -60px;
+        margin-top: -65px;
+        scale: 0.6;
+      }
+    }
+
+    &-distance-time {
+      flex-direction: column;
+      gap: 4.5rem;
+      * {
+        font-size: 2.5rem;
+      }
+    }
+
+    &-distance :nth-child(2) {
+      font-size: 3rem;
+    }
+
+    &-time :nth-child(2) {
+      font-size: 3rem;
+    }
+  }
+}

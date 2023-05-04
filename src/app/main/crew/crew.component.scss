@@ -1,0 +1,193 @@
+.crew {
+  &-container {
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    * {
+      color: aliceblue;
+      font-size: 1.5rem;
+    }
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10rem;
+    }
+  }
+
+  &-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 2rem;
+
+    & :first-child {
+      opacity: 0.5;
+    }
+
+    * {
+      font-size: 2.3rem;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6rem;
+
+    .memberCircle {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      padding: 0.8rem;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      &-active {
+        background-color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  &-selection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 2rem;
+  }
+
+  &-selection-not-mobile {
+    display: flex;
+  }
+
+  &-selection-mobile {
+    display: none;
+  }
+
+  &-image-mobile {
+    display: none;
+  }
+
+  &-image-not-mobile {
+    display: block;
+  }
+
+  &-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem 0;
+
+    .role {
+      opacity: 0.6;
+      font-size: 2.2rem;
+    }
+    .name {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    .bio {
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .crew {
+    &-container {
+      gap: 0;
+
+      & > div {
+        gap: 0;
+        flex-direction: column;
+      }
+    }
+    &-body {
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      gap: 5rem;
+    }
+
+    &-information {
+      height: fit-content;
+      p {
+        padding: 0 3rem;
+      }
+      .role {
+        font-size: 2.5rem;
+      }
+      .name {
+        font-size: 4.35rem;
+      }
+      .bio {
+        font-size: 2.5rem;
+      }
+    }
+
+    &-selection {
+      justify-content: center;
+      height: fit-content;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .crew {
+    &-container {
+      background-size: cover;
+
+      & > div {
+        align-items: center;
+      }
+    }
+
+    &-selection-not-mobile {
+      display: none;
+    }
+
+    &-selection-mobile {
+      display: flex;
+    }
+
+    &-information {
+      gap: 3rem;
+
+      p {
+        padding: 0 3rem;
+      }
+      .role {
+        font-size: 2.5rem;
+      }
+      .name {
+        font-size: 4.35rem;
+      }
+      .bio {
+        font-size: 2.5rem;
+      }
+    }
+
+    &-body {
+      gap: 4rem;
+      align-items: center;
+      & > img {
+        display: block;
+        height: 55rem;
+        border-bottom: 1px solid grey;
+      }
+    }
+
+    &-image-not-mobile {
+      display: none !important;
+    }
+  }
+}

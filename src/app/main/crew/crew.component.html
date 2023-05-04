@@ -1,0 +1,28 @@
+<div class="crew-container full-height full-width"
+[ngStyle]="{'background-image': deviceWidth > 959 ? 'url(../../../assets/crew/background-crew-desktop.jpg)' : deviceWidth > 599 ? 'url(../../../assets/crew/background-crew-tablet.jpg)' : 'url(../../../assets/crew/background-crew-mobile.jpg)'}">
+<div class="content-container full-height full-width">
+
+
+  <div class="crew-body full-height">
+    <div class="crew-title">
+      <span>02</span>
+      <span>MEET YOUR CREW</span>
+    </div>
+    <img [src]="selectedMember.images.png"  class="crew-image-mobile full-height" alt=""/>
+    <div class="crew-information full-height full-width">
+      <div class="crew-selection crew-selection-mobile full-width">
+        <div *ngFor="let member of crew" class="memberCircle" (click)="selectMember(member)"
+        [ngClass]=" selectedMember.name === member.name ? 'memberCircle-active' : ''"></div>
+      </div>
+      <p class="role">{{ selectedMember.role | uppercase }}</p>
+      <p class="name">{{ selectedMember.name | uppercase }}</p>
+      <p class="bio">{{ selectedMember.bio }}</p>
+      <div class="crew-selection crew-selection-not-mobile full-width">
+        <div *ngFor="let member of crew" class="memberCircle" (click)="selectMember(member)"
+        [ngClass]=" selectedMember.name === member.name ? 'memberCircle-active' : ''"></div>
+      </div>
+    </div>
+    <img [src]="selectedMember.images.png"  class="crew-image-not-mobile" alt=""/>
+  </div>
+  </div>
+</div>

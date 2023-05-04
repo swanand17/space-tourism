@@ -1,0 +1,48 @@
+<nav class="navbar full-width">
+  <div class="navbar-maxWidth full-height full-width">
+    
+  <img src="../../../assets/shared/logo.svg" alt="logo"/>
+  <div class="navbar-line"></div>
+  <ul class="navbar-links">
+    <li routerLink="home" routerLinkActive="active-link">
+      <strong>00</strong>
+      <span>HOME</span>
+    </li>
+    <li routerLink="destination" routerLinkActive="active-link">
+      <strong>01</strong>&nbsp;&nbsp;DESTINATION
+    </li>
+    <li routerLink="crew" routerLinkActive="active-link">
+      <strong>02</strong>&nbsp;&nbsp;CREW
+    </li>
+    <li routerLink="technology" routerLinkActive="active-link">
+      <strong>03</strong>&nbsp;&nbsp;TECHNOLOGY
+    </li>
+  </ul>
+  <div class="navbar-menu-icon" (click)="openSidenav()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>  
+  <div class="navbar-menu-mobile" [ngStyle]="{ 'width':sideNavOpened ? '70%' : '0%'}">
+    <div class="navbar-menu-icon-close" (click)="closeSidenav()">
+      <div></div>
+      <div></div>
+    </div>  
+    <ul class="navbar-links-mobile">
+      <li (click)="closeSidenav()" routerLink="home" routerLinkActive="active-link-mobile">
+        <strong>00</strong>&nbsp;&nbsp;&nbsp;HOME
+      </li>
+      <li (click)="closeSidenav()" routerLink="destination" routerLinkActive="active-link-mobile">
+        <strong>01</strong>&nbsp;&nbsp;DESTINATION
+      </li>
+      <li (click)="closeSidenav()" routerLink="crew" routerLinkActive="active-link-mobile">
+        <strong>02</strong>&nbsp;&nbsp;CREW
+      </li>
+      <li (click)="closeSidenav()" routerLink="technology" routerLinkActive="active-link-mobile">
+        <strong>03</strong>&nbsp;&nbsp;TECHNOLOGY
+      </li>
+    </ul>
+  </div>
+  </div>
+
+</nav>
