@@ -14,9 +14,10 @@
 
     & > div {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 5rem;
     }
   }
 
@@ -37,7 +38,7 @@
 
   &-body {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 6rem;
@@ -79,6 +80,7 @@
 
   &-image-not-mobile {
     display: block;
+    margin-top: -130px;
   }
 
   &-information {
@@ -105,13 +107,9 @@
   .crew {
     &-container {
       gap: 0;
-
-      & > div {
-        gap: 0;
-        flex-direction: column;
-      }
     }
     &-body {
+      flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       text-align: center;

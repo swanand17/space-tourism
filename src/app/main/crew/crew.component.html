@@ -1,13 +1,13 @@
 <div class="crew-container full-height full-width"
-[ngStyle]="{'background-image': deviceWidth > 959 ? 'url(../../../assets/crew/background-crew-desktop.jpg)' : deviceWidth > 599 ? 'url(../../../assets/crew/background-crew-tablet.jpg)' : 'url(../../../assets/crew/background-crew-mobile.jpg)'}">
+[ngStyle]="{'background-image': deviceWidth > 959 ? 'url(./assets/crew/background-crew-desktop.jpg)' : deviceWidth > 599 ? 'url(./assets/crew/background-crew-tablet.jpg)' : 'url(./assets/crew/background-crew-mobile.jpg)'}">
 <div class="content-container full-height full-width">
 
 
+  <div class="crew-title">
+    <span>02</span>
+    <span>MEET YOUR CREW</span>
+  </div>
   <div class="crew-body full-height">
-    <div class="crew-title">
-      <span>02</span>
-      <span>MEET YOUR CREW</span>
-    </div>
     <img [src]="selectedMember.images.png"  class="crew-image-mobile full-height" alt=""/>
     <div class="crew-information full-height full-width">
       <div class="crew-selection crew-selection-mobile full-width">
