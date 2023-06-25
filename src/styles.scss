@@ -14,14 +14,14 @@
 }
 html {
   height: 100%;
-  box-sizing: border-box;
 }
 body {
+  box-sizing: border-box;
   font-family: Bellefair;
   font-size: 10px;
   font-weight: 400;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden scroll;
   -webkit-font-smoothing: antialiased;
 }
 

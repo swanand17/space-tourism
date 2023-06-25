@@ -111,7 +111,8 @@
 @media screen and (max-width: 959px) {
   .technology {
     &-container {
-      padding-top: 0;
+      padding-top: 3rem;
+      overflow: hidden;
 
       & > div {
         align-items: center;
@@ -175,6 +176,7 @@
       }
     }
     &-image-mobile {
+      overflow: hidden;
       & > img {
         width: 100%;
       }

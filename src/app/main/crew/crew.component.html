@@ -1,7 +1,6 @@
 <div class="crew-container full-height full-width"
 [ngStyle]="{'background-image': deviceWidth > 959 ? 'url(./assets/crew/background-crew-desktop.jpg)' : deviceWidth > 599 ? 'url(./assets/crew/background-crew-tablet.jpg)' : 'url(./assets/crew/background-crew-mobile.jpg)'}">
-<div class="content-container full-height full-width">
-
+<div class="content-container full-width">
 
   <div class="crew-body full-height">
     <div class="crew-title">
@@ -22,7 +21,8 @@
         [ngClass]=" selectedMember.name === member.name ? 'memberCircle-active' : ''"></div>
       </div>
     </div>
-    <img [src]="selectedMember.images.png"  class="crew-image-not-mobile" alt=""/>
   </div>
+  <img [src]="selectedMember.images.png" class="crew-image-not-mobile" alt=""/>
+  
   </div>
 </div>

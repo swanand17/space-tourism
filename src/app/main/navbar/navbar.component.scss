@@ -94,6 +94,9 @@
       font-size: 1.7rem;
     }
 
+    &-links {
+      gap: 2rem;
+    }
     &-maxWidth {
       padding: 2rem 0 0 4rem;
       display: flex;
@@ -189,8 +192,8 @@
 
     &-menu-mobile {
       height: 100%;
-      width: 0;
       position: fixed;
+      width: 0;
       z-index: 1;
       top: 0;
       right: 0;
